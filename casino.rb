@@ -1,3 +1,4 @@
+require_relative 'roulette'
 require_relative 'player'
 
 class Casino
@@ -16,6 +17,8 @@ class Casino
     puts "6. Leave the casino"
     choice = gets.to_i
     if choice == 1
+      roulette = Roulette.new(@player_one)
+      roulette.main_menu
       # Roulette.new(@player_one) => this will allow money to be + or - from wallet.
       # need to pass in player as an argument in initialize => def initialize(player)
     elsif choice == 2
