@@ -1,4 +1,5 @@
 require_relative 'player'
+require_relative 'slots'
 
 class Casino
   def initialize
@@ -19,6 +20,7 @@ class Casino
       # Roulette.new(@player_one) => this will allow money to be + or - from wallet.
       # need to pass in player as an argument in initialize => def initialize(player)
     elsif choice == 2
+      Slots.new(@player_one)
       # Slots.new(@player_one) => this will allow money to be + or - from wallet.
       # need to pass in player as an argument in initialize => def initialize(player)
     elsif choice == 3
