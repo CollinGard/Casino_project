@@ -1,5 +1,6 @@
 require 'colorize'
 
+
 class Slots
   def initialize(player)
     @player_one = player
@@ -45,7 +46,7 @@ class Slots
     when 4
       spacer
       puts "Goodbye!"
-      exit
+      casino_return
     end  
   end
 
@@ -106,6 +107,11 @@ class Slots
       puts "You have lost".colorize(:red)
     end
     welcome
+  end
+
+  def casino_return
+    menu = Casino.new
+    menu.main_choices
   end
  
 end

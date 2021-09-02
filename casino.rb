@@ -1,5 +1,6 @@
 require_relative 'player'
 require_relative 'slots'
+require_relative 'high_low'
 
 class Casino
   def initialize
